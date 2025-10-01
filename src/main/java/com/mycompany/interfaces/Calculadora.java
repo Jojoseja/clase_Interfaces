@@ -68,7 +68,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(0, 0, 0));
         jButton8.setForeground(new java.awt.Color(51, 255, 0));
         jButton8.setText("8");
-        jButton8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton8.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton8.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +79,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(0, 0, 0));
         jButton7.setForeground(new java.awt.Color(51, 255, 0));
         jButton7.setText("7");
-        jButton7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton7.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton7.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +90,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(0, 0, 0));
         jButton5.setForeground(new java.awt.Color(51, 255, 0));
         jButton5.setText("5");
-        jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton5.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +101,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(0, 0, 0));
         jButton4.setForeground(new java.awt.Color(51, 255, 0));
         jButton4.setText("4");
-        jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton4.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +112,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setForeground(new java.awt.Color(51, 255, 0));
         jButton2.setText("2");
-        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton2.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +123,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setForeground(new java.awt.Color(51, 255, 0));
         jButton1.setText("1");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton1.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +134,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonClear.setBackground(new java.awt.Color(0, 0, 0));
         jButtonClear.setForeground(new java.awt.Color(51, 255, 0));
         jButtonClear.setText("C");
-        jButtonClear.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonClear.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonClear.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonClear.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +145,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton0.setBackground(new java.awt.Color(0, 0, 0));
         jButton0.setForeground(new java.awt.Color(51, 255, 0));
         jButton0.setText("0");
-        jButton0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton0.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton0.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton0.addActionListener(new java.awt.event.ActionListener() {
@@ -164,7 +156,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonSum.setBackground(new java.awt.Color(0, 0, 0));
         jButtonSum.setForeground(new java.awt.Color(51, 255, 0));
         jButtonSum.setText("+");
-        jButtonSum.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonSum.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonSum.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonSum.addActionListener(new java.awt.event.ActionListener() {
@@ -176,7 +167,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 0, 0));
         jButton9.setForeground(new java.awt.Color(51, 255, 0));
         jButton9.setText("9");
-        jButton9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton9.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton9.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -188,7 +178,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonMin.setBackground(new java.awt.Color(0, 0, 0));
         jButtonMin.setForeground(new java.awt.Color(51, 255, 0));
         jButtonMin.setText("-");
-        jButtonMin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonMin.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonMin.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonMin.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +189,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(0, 0, 0));
         jButton6.setForeground(new java.awt.Color(51, 255, 0));
         jButton6.setText("6");
-        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton6.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton6.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -212,7 +200,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonMul.setBackground(new java.awt.Color(0, 0, 0));
         jButtonMul.setForeground(new java.awt.Color(51, 255, 0));
         jButtonMul.setText("*");
-        jButtonMul.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonMul.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonMul.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonMul.addActionListener(new java.awt.event.ActionListener() {
@@ -224,7 +211,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setForeground(new java.awt.Color(51, 255, 0));
         jButton3.setText("3");
-        jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.setMaximumSize(new java.awt.Dimension(80, 80));
         jButton3.setMinimumSize(new java.awt.Dimension(80, 80));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -236,7 +222,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonDiv.setBackground(new java.awt.Color(0, 0, 0));
         jButtonDiv.setForeground(new java.awt.Color(51, 255, 0));
         jButtonDiv.setText("/");
-        jButtonDiv.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonDiv.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonDiv.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonDiv.addActionListener(new java.awt.event.ActionListener() {
@@ -248,7 +233,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonEqual.setBackground(new java.awt.Color(0, 0, 0));
         jButtonEqual.setForeground(new java.awt.Color(51, 255, 0));
         jButtonEqual.setText("=");
-        jButtonEqual.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonEqual.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonEqual.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonEqual.addActionListener(new java.awt.event.ActionListener() {
@@ -266,7 +250,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonDecimal.setBackground(new java.awt.Color(0, 0, 0));
         jButtonDecimal.setForeground(new java.awt.Color(51, 255, 0));
         jButtonDecimal.setText(".");
-        jButtonDecimal.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonDecimal.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonDecimal.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonDecimal.addActionListener(new java.awt.event.ActionListener() {
@@ -278,7 +261,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonRetroceso.setBackground(new java.awt.Color(0, 0, 0));
         jButtonRetroceso.setForeground(new java.awt.Color(51, 255, 0));
         jButtonRetroceso.setText("<-");
-        jButtonRetroceso.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonRetroceso.setMaximumSize(new java.awt.Dimension(80, 80));
         jButtonRetroceso.setMinimumSize(new java.awt.Dimension(80, 80));
         jButtonRetroceso.addActionListener(new java.awt.event.ActionListener() {
