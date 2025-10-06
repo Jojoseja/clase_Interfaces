@@ -4,6 +4,9 @@
  */
 package nuevoFormulario;
 
+import java.awt.Color;
+import java.util.ArrayList;
+
 /**
  *
  * @author jfeyj
@@ -60,24 +63,44 @@ public class Formulario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prueba de entrada de datos");
 
+        codigoText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                codigoTextCaretUpdate(evt);
+            }
+        });
         codigoText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoTextActionPerformed(evt);
             }
         });
 
+        nifnText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                nifnTextCaretUpdate(evt);
+            }
+        });
         nifnText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nifnTextActionPerformed(evt);
             }
         });
 
+        nombreText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                nombreTextCaretUpdate(evt);
+            }
+        });
         nombreText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreTextActionPerformed(evt);
             }
         });
 
+        apellidosText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                apellidosTextCaretUpdate(evt);
+            }
+        });
         apellidosText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidosTextActionPerformed(evt);
@@ -114,36 +137,66 @@ public class Formulario extends javax.swing.JFrame {
 
         label10.setText("Total");
 
+        cpText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                cpTextCaretUpdate(evt);
+            }
+        });
         cpText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpTextActionPerformed(evt);
             }
         });
 
+        localidadText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                localidadTextCaretUpdate(evt);
+            }
+        });
         localidadText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 localidadTextActionPerformed(evt);
             }
         });
 
+        telefonoText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                telefonoTextCaretUpdate(evt);
+            }
+        });
         telefonoText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefonoTextActionPerformed(evt);
             }
         });
 
+        movilText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                movilTextCaretUpdate(evt);
+            }
+        });
         movilText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 movilTextActionPerformed(evt);
             }
         });
 
+        faxText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                faxTextCaretUpdate(evt);
+            }
+        });
         faxText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 faxTextActionPerformed(evt);
             }
         });
 
+        emailText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                emailTextCaretUpdate(evt);
+            }
+        });
         emailText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTextActionPerformed(evt);
@@ -156,6 +209,11 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
 
+        niflText.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                niflTextCaretUpdate(evt);
+            }
+        });
         niflText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 niflTextActionPerformed(evt);
@@ -298,7 +356,7 @@ public class Formulario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void codigoTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoTextActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_codigoTextActionPerformed
 
     private void nifnTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nifnTextActionPerformed
@@ -355,16 +413,150 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        StringBuilder sb = new StringBuilder();
-        sb.append("Error en: ");
-        if (codigoCheck(codigoText.getText())){
-            sb.append("Código");
+
+        String text = "Errores en: \n";
+               
+        ArrayList<String> errores = new ArrayList<>();
+        if (!(codigoCheck(codigoText.getText()))){
+            errores.add("Código");
         }
-        if (nameCheck(nombreText.getText())) {
-            
-        } 
-        jOptionPane1.showMessageDialog(null, texto, "Ventana Error", jOptionPane1.YES_OPTION);
+        if (!(numCheck(nifnText.getText()))){
+            errores.add("DNI");
+        }
+        if (!(nameCheck(nombreText.getText()))) {
+            errores.add("Nombre");
+        }
+        if (!(nameCheck(apellidosText.getText()))) {
+            errores.add("Apellidos");
+        }
+        if (!(cpCheck(cpText.getText()))) {
+            errores.add("C.P.");
+        }
+        if (!(phoneCheck(telefonoText.getText()))) {
+            errores.add("Teléfono");
+        }
+        if (!(phoneCheck(movilText.getText()))) {
+            errores.add("Móvil");
+        }
+        if (!(phoneCheck(faxText.getText()))) {
+            errores.add("Fax");
+        }
+        if (!(emailCheck(emailText.getText()))) {
+            errores.add("email");
+        }
+        
+        for (String t : errores){
+            text += t + ", ";
+        }
+        
+        if (errores.isEmpty()) {
+            jOptionPane1.showMessageDialog(null, "todo correcto", "todo bien :D", jOptionPane1.YES_OPTION);
+        } else {
+            jOptionPane1.showMessageDialog(null, text, "Ventana Error", jOptionPane1.YES_OPTION);
+        }
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void codigoTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_codigoTextCaretUpdate
+        String text = codigoText.getText();
+        if (codigoCheck(text)){
+            codigoText.setForeground(Color.BLACK);
+        } else {
+            codigoText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_codigoTextCaretUpdate
+
+    private void nifnTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_nifnTextCaretUpdate
+        String text = nifnText.getText();
+        if (numCheck(text)){
+            nifnText.setForeground(Color.BLACK);
+        } else {
+            nifnText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_nifnTextCaretUpdate
+
+    private void nombreTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_nombreTextCaretUpdate
+        String text = nombreText.getText();
+        if (nameCheck(text)){
+            nombreText.setForeground(Color.BLACK);
+        } else {
+            nombreText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_nombreTextCaretUpdate
+
+    private void apellidosTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_apellidosTextCaretUpdate
+        String text = apellidosText.getText();
+        if (nameCheck(text)){
+            apellidosText.setForeground(Color.BLACK);
+        } else {
+            apellidosText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_apellidosTextCaretUpdate
+
+    private void cpTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_cpTextCaretUpdate
+        String text = cpText.getText();
+        if (cpCheck(text)){
+            cpText.setForeground(Color.BLACK);
+        } else {
+            cpText.setForeground(Color.RED);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_cpTextCaretUpdate
+
+    private void telefonoTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_telefonoTextCaretUpdate
+        String text = telefonoText.getText();
+        if (phoneCheck(text)){
+            telefonoText.setForeground(Color.BLACK);
+        } else {
+            telefonoText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_telefonoTextCaretUpdate
+
+    private void movilTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_movilTextCaretUpdate
+        String text = movilText.getText();
+        if (phoneCheck(text)){
+            movilText.setForeground(Color.BLACK);
+        } else {
+            movilText.setForeground(Color.RED);
+        } 
+    }//GEN-LAST:event_movilTextCaretUpdate
+
+    private void faxTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_faxTextCaretUpdate
+        String text = faxText.getText();
+        if (phoneCheck(text)){
+            faxText.setForeground(Color.BLACK);
+        } else {
+            faxText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_faxTextCaretUpdate
+
+    private void emailTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_emailTextCaretUpdate
+        String text = emailText.getText();
+        if (emailCheck(text)){
+            emailText.setForeground(Color.BLACK);
+        } else {
+            emailText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_emailTextCaretUpdate
+
+    private void localidadTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_localidadTextCaretUpdate
+        String text = localidadText.getText();
+        if (nameCheck(text)){
+            localidadText.setForeground(Color.BLACK);
+        } else {
+            localidadText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_localidadTextCaretUpdate
+
+    private void niflTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_niflTextCaretUpdate
+        String text = niflText.getText();
+        if (text.matches("[A-Za-z]")){
+            telefonoText.setForeground(Color.BLACK);
+        } else {
+            telefonoText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_niflTextCaretUpdate
 
     /**
      * @param args the command line arguments
@@ -393,10 +585,10 @@ public class Formulario extends javax.swing.JFrame {
     
     //método para comprobar Nombre y Apellido
     public static boolean nameCheck(String text){
-        return text.matches("[A-Za-z]+"); 
+        return text.matches("[A-Za-z\\s]+"); 
     }
     
-    //método para comprobar Teléfono, Móvil, Fax, DNIn
+    //método para comprobar Teléfono, Móvil, Fax
     public static boolean phoneCheck(String text){
         return text.matches("[0-9]{9}");
     }
@@ -414,6 +606,11 @@ public class Formulario extends javax.swing.JFrame {
     //metodo para comprobar codigo postal
     public static boolean cpCheck(String text){
         return text.matches("[0-9]{5}");
+    }
+    
+    //metodo para comprobar DNIN
+    public static boolean numCheck(String text){
+        return text.matches("[0-9]{8}");
     }
     
     //método para comprobar DNIl
