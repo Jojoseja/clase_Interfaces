@@ -423,11 +423,18 @@ public class Formulario extends javax.swing.JFrame {
         if (!(numCheck(nifnText.getText()))){
             errores.add("DNI");
         }
+        
+        if (!comprobarDNI()){
+            errores.add("Letra del DNI");
+        }
         if (!(nameCheck(nombreText.getText()))) {
             errores.add("Nombre");
         }
         if (!(nameCheck(apellidosText.getText()))) {
             errores.add("Apellidos");
+        }
+        if (domicilioText.getText().isEmpty()){
+            errores.add("Domicilio");
         }
         if (!(cpCheck(cpText.getText()))) {
             errores.add("C.P.");
@@ -445,12 +452,23 @@ public class Formulario extends javax.swing.JFrame {
             errores.add("email");
         }
         
-        for (String t : errores){
-            text += t + ", ";
+        
+        
+        if (errores.size()==1){
+            text = "Error en: ";
         }
         
+        for (int i = 0; i < errores.size(); i++){
+            if (i == errores.size()-1){
+                text += errores.get(i);
+            } else {
+                text += errores.get(i) + ", ";
+            }
+        }
+        
+        
         if (errores.isEmpty()) {
-            jOptionPane1.showMessageDialog(null, "todo correcto", "todo bien :D", jOptionPane1.YES_OPTION);
+            jOptionPane1.showMessageDialog(null, "Formulario Finalizado con Éxito", "Formulario Finalizado", jOptionPane1.INFORMATION_MESSAGE);
         } else {
             jOptionPane1.showMessageDialog(null, text, "Ventana Error", jOptionPane1.YES_OPTION);
         }
@@ -551,10 +569,10 @@ public class Formulario extends javax.swing.JFrame {
 
     private void niflTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_niflTextCaretUpdate
         String text = niflText.getText();
-        if (text.matches("[A-Za-z]")){
-            telefonoText.setForeground(Color.BLACK);
+        if (text.matches("[a-zA-Z]")){
+            niflText.setForeground(Color.BLACK);
         } else {
-            telefonoText.setForeground(Color.RED);
+            niflText.setForeground(Color.RED);
         }
     }//GEN-LAST:event_niflTextCaretUpdate
 
@@ -616,6 +634,21 @@ public class Formulario extends javax.swing.JFrame {
     //método para comprobar DNIl
     public static boolean letraCheck(String text){
         return text.matches("[A-Za-z]");
+    }
+    
+    public boolean comprobarDNI(){
+        String num = nifnText.getText();
+        String let = niflText.getText();
+        
+        String[] letras = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X","B", 
+                           "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+        int resto1 = Integer.parseInt(num) % 23;
+        if (let.toUpperCase().equals(letras[resto1])){
+            return true;
+        } else {
+        return false;
+            }
+        
     }
     
     public void reset(){
