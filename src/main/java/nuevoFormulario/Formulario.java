@@ -214,6 +214,11 @@ public class Formulario extends javax.swing.JFrame {
                 niflTextCaretUpdate(evt);
             }
         });
+        niflText.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                niflTextFocusLost(evt);
+            }
+        });
         niflText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 niflTextActionPerformed(evt);
@@ -569,12 +574,21 @@ public class Formulario extends javax.swing.JFrame {
 
     private void niflTextCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_niflTextCaretUpdate
         String text = niflText.getText();
-        if (text.matches("[a-zA-Z]")){
+        if (text.matches("[a-zA-Z]") && comprobarDNI()){
             niflText.setForeground(Color.BLACK);
         } else {
             niflText.setForeground(Color.RED);
         }
     }//GEN-LAST:event_niflTextCaretUpdate
+
+    private void niflTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_niflTextFocusLost
+        String text = niflText.getText();
+        if (text.matches("[a-zA-Z]") && comprobarDNI()){
+            niflText.setForeground(Color.BLACK);
+        } else {
+            niflText.setForeground(Color.RED);
+        }
+    }//GEN-LAST:event_niflTextFocusLost
 
     /**
      * @param args the command line arguments
